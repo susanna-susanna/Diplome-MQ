@@ -1,0 +1,823 @@
+body {
+  margin: 0;
+  font-family: /*Arial,*/ 'Open Sans', sans-serif;
+  
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url(sources/fonts/OpenSans-Bold.ttf);
+  src: url(sources/fonts/OpenSans-Bold.woff);
+  src: url(sources/fonts/OpenSans-Bold.woff2);
+  src: url(sources/fonts/OpenSans-Regular.ttf);
+  src: url(sources/fonts/OpenSans-Regular.woff);
+  src: url(sources/fonts/OpenSans-Regular.woff2);
+}
+
+.top, .named, .sect_title, .number, .download_app, .buttons_text {
+  font-weight: 700;
+}
+.top, .buttons_text, .named, .sect_title, .footer {
+  text-transform: uppercase;
+}
+
+.top {
+  width: 100%;
+  background-color: #fc0d0d;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  font-family: inherit;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 2;
+}
+.top::after {
+  content: "";
+  background-color: #0A0E34;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;  
+}
+
+
+.header_container, .footer_container, .down_app, .get_it_on, .butt, .app_container, .download_app, .can_do {
+  justify-content: center;
+}
+
+.header_container, .footer_container {
+  width: 100%;
+  box-sizing: border-box;   /* полная фигня с шапкой на планшете*/
+  margin: 0 auto;           /* и такая же с футером на планшете*/
+  position: relative;       /*пришлось делать контейнерам фиксированную высоту*/
+  z-index: 2;
+}
+
+.title {
+  display: block;
+  width: 84%;
+  
+}
+.title2 {
+  margin-left: auto;
+}
+
+.btn {
+  width: 100%;
+  text-decoration: none;
+  display: block;
+}
+.logotype, .icon {
+  fill: #FFFFFF;
+}
+
+.logotype, .store_buttons, .down_app, .get_it_on, .butt, .logo_img, title {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.down_app, .get_it_on, .butt {
+  background-color: #5E42B0;
+  display: flex;
+  align-items: center;
+}
+
+.butt {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+  border: 0;
+  
+}
+.buttons_text {
+  text-align: left;
+  font-weight: inherit;
+}
+.buttons_text span {
+  font-weight: 400;
+}
+.buttons_text > p {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  line-height: 0;
+}
+.butt:focus {
+  outline: none;
+}
+.icon:hover, .butt:hover {
+  fill: #5E42B0;
+  color: #5E42B0;
+}
+.down_app:hover, .get_it_on:hover, .butt:hover {
+  background-color: #FFFFFF;
+}
+
+
+
+
+.collobaration {
+  background-color: #F5F4F9;
+}
+.growth_1 {
+  background-color: #5E42B0;
+}
+.growth {
+  background-color: #090C35;
+}
+.growth_1 > p, .growth > p {
+  color: #FFFFFF;
+}
+.named{
+  color: #E7E7E7;
+}
+.sect_title {
+  color: #C1C1C1;
+}
+.title_1 {
+  opacity: 0.4;
+}
+.number {
+  color: #000000;
+  margin-right: 9px;
+}
+.differ{
+  color: #0A0E34;
+}
+.light {
+  color: #9173E6;
+}
+.opac {
+  color: #F5F6F7;
+}
+
+.line {
+  border-radius: 2px;
+  background-color: #5E42B0;
+}
+.line_1, .line_2 {
+  background-color: #FFFFFF;
+}
+.line_2 {
+  opacity: 0.3;
+}
+
+.art_header {
+  display: flex;
+  align-items: center;
+}
+
+.content > p {
+  margin: 0;
+}
+
+.post_number {
+  background-color: #5E42B0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.images_1, .images_2, .images_3, .images_4, .images_5 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.post, .images_3, .images_4, .images_5 {
+  position: relative;
+}
+
+.images_1, .images_2, .post_number {
+  position: absolute;
+  z-index: 3;
+}
+
+
+.logo_img {
+  display: block;
+}
+
+.footer {
+  width: 100%;
+  background-color: #fc0d0d;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  font-family: inherit;
+  font-weight: inherit;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.footer::after {
+  content: "";
+  background-color: #0A0E34;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;  
+}
+
+.footer_container {
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.download_app, .can_do {
+  text-align: center;
+}
+.can_do {
+  color: #A496CA;
+}
+
+
+
+@media(max-width: 767px) {
+  .top {
+    height: 570px;
+    background-image: url("sources/img/football_767.jpg");
+  }
+  .header_container {
+    height: 570px;
+    padding-top: 33px;
+    padding-left: 6.5%;
+    padding-right: 6.5%;
+    padding-bottom: 84px;
+  }
+  .logotype {
+    width: 133px;
+    height: 36px;
+  }
+  .title {
+    max-width: 394px;
+    font-size: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+  }
+  .title1 {
+    margin-top: 130px;
+    margin-bottom: 18px;
+  }
+  .title2 {
+    width: 224px;
+  }
+  .down_app {
+    margin-bottom: 14px;
+  }
+  .down_app, .get_it_on, .butt {
+    border-radius: 17px;
+    height: 35px;
+  }
+  .down_app, .get_it_on {
+    width: 280px;
+  }
+  
+  .icon {
+    width: 21px;
+    height: 23px;
+    margin-right: 8px;
+  }
+  .buttons_text > p {
+    margin: 1px;
+    font-size: 8px;
+  }
+
+  
+  .content, .post_1 > .container {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  main > .post {
+    padding-top: 16px;
+    position: relative;
+  }
+  .named {
+    margin-bottom: 234px;
+    margin-left: 6%;
+    font-size: 50px;
+  }
+  .content {
+    padding-top: 56px;
+    padding-bottom: 47px;
+  }
+  .number {
+    font-size: 14px;
+  }
+  .line {
+    width: 16px;
+    height: 4px;
+  }
+  .sect_title {
+    font-size: 23px;
+  }
+  .content > p {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  .connection {
+    background-color: #FAFAFA;
+  }
+  .post_1 > .container {
+    padding-top: 29px;
+    padding-bottom: 74px;
+  }
+  .post_1 > .sect_title {
+    font-size: 28px;
+  }
+  .container > p {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  .post_number {
+    width: 70px;
+    height: 70px;
+    left: 6%;
+    bottom: -12px;
+  }
+  .images_1 {
+    width: 192px;
+    height: 281px;
+    background-image: url("sources/img/footballer_192.png");
+    top: 80px;
+    left: 22%;
+  }
+  .images_2 {
+    width: 302px;
+    height: 248px;
+    background-image: url("sources/img/basketballer_302.png");
+    top: 78px;
+    left: 3%;
+  }
+  .images_3, .images_4, .images_5 {
+    width: 100%;
+    height: 109vw;
+    background-color: #E66D5A;
+  }
+  .images_3 {
+    background-image: url("sources/img/be-active_640.jpg");
+  }
+  .images_4 {
+    background-image: url("sources/img/find-contact_640.jpg");
+  }
+  .images_5 {
+    background-image: url("sources/img/work-it_640.jpg");
+  }
+
+  
+  .footer {
+    height: 568px;
+    background-image: url("sources/img/game_767.jpg");
+  }
+  .footer_container {
+    height: 568px;
+    padding-top: 99px;
+    padding-bottom: 10px;
+  }
+  .logo {
+    width: 72px;
+    height: 75px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 47px;
+  }
+  .download_app {
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+  }
+  .can_do {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 73px;
+  }
+  .footer_container > .store_buttons {
+    margin-bottom: 78px; 
+  }
+}
+
+
+@media(min-width: 768px) {
+  .store_buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  .down_app, .get_it_on, .butt {
+    border-radius: 38px;
+    height: 77px;
+  }
+  .down_app, .get_it_on {
+    width: 46%;
+  }
+  .icon {
+    width: 38px;
+    height: 43px;
+    margin-right: 27px;
+  }
+  .buttons_text > p {
+    font-size: 14px;
+  }
+  span {
+    font-weight: 300;
+  }
+
+  .named {
+    font-size: 80px; 
+  }
+  .named, .can_do {
+    line-height: 50px;
+  }
+  .buttons_text > p, .number, .opac {
+    line-height: 34px;
+    letter-spacing: 1px;
+  }
+  .number {
+    font-size: 18px;
+  }
+  .opac {
+    font-size: 24px;
+  }
+  
+  .content > p, .container > p {
+    line-height: 28px;
+    letter-spacing: 1px;
+  }
+  .container > p {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .line_m, .line_2 {
+    height: 5px;
+  }
+  .line_m {
+    width: 20px;
+  }
+  .line_2 {
+    width: 25px;
+  }
+ 
+}
+
+
+@media(min-width: 768px) and (max-width: 1023px) {
+  .top {
+    height: 960px;
+    background-image: url("sources/img/football_1280.jpg");
+  }
+  .header_container {
+    height: 960px;
+    padding-top: 40px;
+    padding-bottom: 91px;
+  }
+  
+  .logotype {
+    width: 205px;
+    height: 56px;
+    margin-bottom: 160зч;
+  }
+
+  .title {
+    font-size: 64px;
+    letter-spacing: 3px;
+    margin-left: 9.5%;
+    margin-bottom: 260px;
+  }
+  .title1 {
+    margin-top: 170px;
+    margin-bottom: 6px;
+    margin-left: 13px;
+  }
+  .title2 {
+    width: 535px;
+  }
+  .store_buttons {
+    width: 85%;
+  }
+
+  
+  .sect_title {
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+  .content > p {
+    font-size: 16px;
+  }
+  .post_number {
+    width: 117px;
+    height: 117px;
+    bottom: -36px;
+    left: 4.5%;
+  }
+
+  
+  .container_1 > .named, .container_1 > .content {
+    padding-left: 39%;
+  }
+  .container_1 > .content {
+    padding-right: 4%;
+  }
+  .container_2 > .named, .container_2 > .content {
+    padding-left: 4%;
+  }
+  .container_2 > .content {
+    padding-right: 50%;
+  }
+  .content {
+    padding-top: 58px;
+    padding-bottom: 33px;
+  }
+  .named {
+    margin-top: 85px;
+  }
+  .art_header {
+    margin-bottom: 28px;
+  }
+  .container > .title_1 {
+    font-size: 80px; 
+  }
+  .title_1 {
+    line-height: 60px;
+  }
+  
+
+
+  aside  .container {
+    margin-top: 90px;
+    margin-bottom: 97px;
+    margin-left: 4.3%;
+    margin-right: 4.3%
+  }
+  aside p {
+    margin-top: 37px;
+    margin-left: 8px;
+    margin-bottom: 0;
+  }
+  main > .post {
+    position: relative;
+  }
+  .images_1 {
+    width: 498px;
+    height: 700px;
+    background-image: url("sources/img/footballer_497.png");
+    top: 50px;
+    left: -157px;
+    z-index: 3;
+  }
+  .images_2 {
+    width: 690px;
+    height: 568px;
+    background-image: url("sources/img/basketballer_436.png");
+    top: 50px;
+    right: -25px;
+    z-index: 3;
+  }
+
+  .images_3, .images_4, .images_5 {
+    width: 100%;
+    height: 108vw;
+    background-color: #E66D5A;
+  }
+  .images_3 {
+    background-image: url("sources/img/be-active_960.jpg");
+  }
+  .images_4 {
+    background-image: url("sources/img/find-contact_960.jpg");
+  }
+  .images_5 {
+    background-image: url("sources/img/work-it_960.jpg");
+  }
+  
+  
+
+  .footer {
+    height: 959px;
+    background-image: url("sources/img/game_1280.jpg");
+  }
+  .footer_container {
+    height: 959px;
+    padding-top: 126px;
+    padding-bottom: 23px;
+  }
+  .logo {
+    width: 130px;
+    height: 137px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 68px;
+  }
+  .download_app {
+    font-size: 80px;
+    letter-spacing: 3px;
+  }
+  .logo_img {
+    width: 100%;
+    height: 100%;
+  }
+  .can_do {
+    font-size: 36px;
+    margin-bottom: 270px;
+  }
+  
+  .footer_container > .store_buttons {
+    margin-bottom: 55px; 
+  }
+
+}
+
+
+
+@media(min-width: 1024px) {
+  .top {
+    height: 50%;
+    background-image: url("sources/img/football_1920.jpg");
+  }
+  .header_container {
+    padding-top: 45px;
+    padding-bottom: 110px;
+  }
+  .logotype {
+    width: 191px;
+    height: 52px;
+  }
+  .title {
+    font-size: 4.6vw;
+    margin-left: 9%;
+    margin-bottom: 204px;
+  }
+  .title1 {
+    margin-top: 170px;
+    margin-bottom: 6px;
+    margin-left: 13px;
+  }
+  .title2 {
+    width: 60vw;
+  }
+  .store_buttons {
+    width: 35vw;
+    min-width: 649px;
+  }
+  
+  
+
+  main .sect_title {
+    font-size: 34px;
+    letter-spacing: 2px;
+  }
+  main p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
+  
+   
+  .container_1 > .named, .container_1 > .content {
+    padding-left: 50%;
+  }
+  .container_1 > .content {
+    padding-right: 10%;
+  }
+  .container_2 > .named, .container_2 > .content {
+    padding-left: 10%;
+  }
+  .container_2 > .content {
+    padding-right: 51%;
+  }
+  main .content {
+    padding-top: 52px;
+    padding-bottom: 31px;
+  }
+  .named {
+    margin-top: 100px;
+    margin-bottom: 35px;
+  }
+  .art_header {
+    margin-bottom: 22px;
+  }
+  .post_1 {
+    display: flex;
+  }
+
+  .images_1 {
+    width: 530px;
+    height: 843px;
+    background-image: url("sources/img/footballer_566.png");
+    top: -55px;
+    /*left: 18.2vw;*/
+    right: 52.5%;
+  }
+  .images_2 {
+    width: 992px;
+    height: 817px;
+    background-image: url("sources/img/basketballer_991.png");
+    top: -83px;
+    right: 64px;
+  }
+  .images_3, .images_4, .images_5 {
+    width: 50%;
+    height: 38vw;
+    background-color: #E66D5A;
+  }
+  .images_3 {
+    background-image: url("sources/img/be-active_1024.jpg");
+  }
+  .images_4 {
+    background-image: url("sources/img/find-contact_1024.jpg");
+  }
+  .images_5 {
+    background-image: url("sources/img/work-it_1024.jpg");
+  }
+
+  aside .container {
+    width: 50%;
+    /*align-items: center;*/
+  }
+  
+  .post_1:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  .post_1:nth-child(odd) p, .post_1:nth-child(odd) .title_1 {
+    padding-left: 6.5vw;
+    padding-right: 10vw;
+  }
+  .post_1:nth-child(even) p, .post_1:nth-child(even) .title_1 {
+    padding-left: 10vw;
+    padding-right: 6.5vw;
+  }
+
+  .title_1 {
+    font-size: 4.1vw;
+    line-height: 3vw; 
+    margin-top: 12.5vw;
+    margin-bottom: 75px;
+  }
+
+  .post_number {
+    width: 8.8vw;
+    height: 8vw;
+    top: 11vw;
+    left: calc(width/2);
+  }
+  .post_1:nth-child(odd) .post_number {
+    right: -4.4vw;
+  }
+  .post_1:nth-child(even) .post_number {
+    left: -4.4vw;
+  }
+
+
+
+
+  .footer {
+    height: 50%;
+    background-image: url("sources/img/game_1920.jpg");
+  }
+
+  .footer_container {
+    height: 50%;
+    padding-top: 12vw;
+    padding-bottom: 52px;
+  }
+
+  .app_container {
+    display: flex;
+    width: 45vw;
+    /*min-width: 590px;*/
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 6vw;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo, .logo_img {
+    width: 7vw;
+    height: 7vw;
+  }
+  .download_app {
+    font-size: 4.2vw;
+    letter-spacing: 0.2vw;
+    text-align: left;
+  }
+  .can_do {
+    font-size: 1.8vw;
+    text-align: left;
+  }
+
+  .footer_container > .store_buttons {
+    margin-bottom: 13vw; 
+  }
+
+  
+}
