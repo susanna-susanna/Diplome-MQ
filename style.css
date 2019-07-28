@@ -6,19 +6,26 @@ body {
 
 @font-face {
   font-family: 'Open Sans';
-  src: url(sources/fonts/OpenSans-Bold.ttf);
-  src: url(sources/fonts/OpenSans-Bold.woff);
-  src: url(sources/fonts/OpenSans-Bold.woff2);
-  src: url(sources/fonts/OpenSans-Regular.ttf);
-  src: url(sources/fonts/OpenSans-Regular.woff);
-  src: url(sources/fonts/OpenSans-Regular.woff2);
+  src: url("sources/fonts/OpenSans-Bold.ttf") format("opentype"),
+       url("sources/fonts/OpenSans-Bold.woff") format("woff"),
+       url("sources/fonts/OpenSans-Bold.woff2") format("woff2"),
+       url("sources/fonts/OpenSans-Regular.ttf") format("opentype"),
+       url("sources/fonts/OpenSans-Regular.woff") format("woff"),
+       url("sources/fonts/OpenSans-Regular.woff2") format("woff2");
 }
 
 .top, .named, .sect_title, .number, .download_app, .buttons_text_bold {
-  font-weight: 700;
+  font-weight: inherit;
+}
+.top, .named, .sect_title, .number, .download_app, .buttons_text_bold {
+  font-weight: bold;
 }
 .top, .buttons_text, .named, .sect_title, .footer {
   text-transform: uppercase;
+}
+.buttons_text > span{
+  display: block;
+  font-weight: 400;
 }
 
 .top {
@@ -62,6 +69,7 @@ body {
   
 }
 .title2 {
+  display: block;
   margin-top: 0;
   margin-left: auto;
 }
@@ -75,13 +83,21 @@ body {
   align-items: center;
   color: #FFFFFF;
 }
-.logotype, .icon {
+.logotype path, .icon, .logo {
   fill: #FFFFFF;
 }
 
 .logotype, .store_buttons, .down_app, .btn, .get_it_on, .logo_img, .title {
   margin-left: auto;
   margin-right: auto;
+}
+
+.logo {
+  display: flex;
+  background-color: #5637A6;
+}
+.logo > svg {
+  margin: auto;
 }
 
 .down_app, .get_it_on, .btn {
@@ -92,12 +108,10 @@ body {
 
 .buttons_text {
   text-align: left;
-  font-weight: inherit;
+  font-weight: lighter;
 }
-.buttons_text span {
-  font-weight: 400;
-}
-.buttons_text > p {
+
+.buttons_text > span {
   margin-top: 1px;
   margin-bottom: 1px;
 }
@@ -127,22 +141,32 @@ body {
 }
 .sect_title {
   color: #C1C1C1;
+  display: block;
+    display: flex;
 }
 .title_1 {
   opacity: 0.4;
 }
 .number {
+  /*display: block;*/
+  display: block;
+  height: 24px;
   color: #000000;
   margin-right: 9px;
+  /*box-sizing: border-box;*/
+  border-bottom: 3px solid #5e42b0;
 }
-.differ{
+.differ {
   color: #0A0E34;
+  border-bottom: 3px solid #ffffff;
 }
 .light {
   color: #9173E6;
 }
 .opac {
   color: #F5F6F7;
+  border-bottom: 3px solid #8E7BC8;
+  margin: auto;
 }
 
 .line {
@@ -258,18 +282,19 @@ body {
   }
   .title {
     max-width: 394px;
-    /*font-size: 28px;*/
+    font-size: 28px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 80px;
+    margin-top: 130px;
   }
-  h1 {
+  /*h1 {
     font-size: 28px;
-  }
-  .title1 {
+  }*/
+  /*.title1 {
     margin-top: 130px;
     margin-bottom: 18px;
-  }
+  }*/
   .title2 {
     width: 224px;
   }
@@ -289,7 +314,7 @@ body {
     height: 23px;
     margin-right: 8px;
   }
-  .buttons_text > p {
+  .buttons_text > span {
     font-size: 8px;
   }
 
@@ -303,7 +328,7 @@ body {
     position: relative;
   }
   .named {
-    height: 300px;
+    /*height: 300px;*/
     padding-bottom: 40px;
     margin-bottom: 0;
     margin-top: 0;
@@ -317,7 +342,8 @@ body {
     padding-bottom: 47px;
   }
   .number {
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 26px;
   }
   .line {
     width: 16px;
@@ -327,6 +353,8 @@ body {
     font-size: 23px;
     margin-top: 0;
     margin-bottom: 0;
+    /*display: block;
+    display: flex;*/
   }
   .content > p {
     font-size: 15px;
@@ -400,7 +428,14 @@ body {
     margin-right: auto;
     margin-left: auto;
     /*margin-bottom: 47px;*/
+    border-radius: 14px;
   }
+  .logo > svg {
+    width: 59px;
+    height: 51px;
+  }
+
+
   .download_app {
     font-size: 32px;
     letter-spacing: 2px;
@@ -451,9 +486,12 @@ body {
   .can_do {
     line-height: 35px;
   }
-  .buttons_text > p, .number, .opac {
+  .buttons_text > span, .number, .opac {
     /*line-height: 34px;*/
     letter-spacing: 1px;
+  }
+  .opac {
+    line-height: 16px;
   }
   .number {
     font-size: 18px;
@@ -633,11 +671,17 @@ body {
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 68px;
+    border-radius: 26px; 
   }
-  .logo_img {
+  .logo > svg {
+    width: 107px;
+    height: 85px;
+  } 
+
+  /*.logo_img {
     width: 100%;
     height: 100%;
-  }
+  }*/
   .to_logo {
     margin-bottom: 270px;
   }
@@ -834,11 +878,16 @@ body {
     margin-bottom: 6vw;
     align-items: center;
   }
-  .logo, .logo_img {
+  .logo/*, .logo_img*/ {
     width: 7vw;
     height: 7vw;
     margin-right: auto;
+    border-radius: 1.4vw;
   }
+  .logo > svg {
+    width: 5.6vw;
+    height: 4.4vw;
+  } 
   .download_app {
     font-size: 4.2vw;
     letter-spacing: 0.2vw;
