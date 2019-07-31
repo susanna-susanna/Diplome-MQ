@@ -13,18 +13,14 @@ body {
        url("sources/fonts/OpenSans-Regular.woff2") format("woff2");
 }
 
-.top, .named, .sect_title, .number, .download_app, .buttons_text_bold {
+/*.top, .named, .sect_title, .number, .download_app, .buttons_text_bold {
   font-weight: inherit;
-}
-.top, .named, .sect_title, .number, .download_app, .buttons_text_bold {
+}*/
+/*.top, */.title, .named, .sect_title, .number, .download_app, .buttons_text_bold {
   font-weight: bold;
 }
 .top, .buttons_text, .named, .sect_title, .footer {
   text-transform: uppercase;
-}
-.buttons_text > span{
-  display: block;
-  font-weight: 400;
 }
 
 .top {
@@ -56,7 +52,9 @@ body {
 .header_container, .footer_container {
   width: 100%;
   box-sizing: border-box;  
-  margin: 0 auto;           
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;           
   position: relative;      
   z-index: 2;
 }
@@ -110,13 +108,20 @@ body {
 
 .buttons_text {
   text-align: left;
-  font-weight: lighter;
+  /*font-weight: lighter;*/
 }
-
 .buttons_text > span {
+  display: block;
   margin-top: 1px;
   margin-bottom: 1px;
 }
+
+.buttons_text_norm {
+  font-weight: lighter;
+  /*font-weight: 400;*/
+  font-weight: normal;
+}
+
 .btn:hover, .btn:hover .icon {
   fill: #5E42B0;
   color: #5E42B0;
@@ -172,6 +177,7 @@ body {
 .content > p {
   margin: 0;
 }
+
 
 .post_number {
   background-color: #5E42B0;
@@ -234,15 +240,19 @@ picture, source, img {
   color: #A496CA;
 }
 
+main .post .container p, aside .post .container p {
+  font-weight: lighter;
+  font-weight: normal;
+}
 
 
 @media(max-width: 767px) {
   .top {
-    height: 570px;
+    min-height: 570px;
     background-image: url("sources/img/football_767.jpg");
   }
   .header_container {
-    height: 570px;
+    min-height: 570px;
     padding-top: 33px;
     padding-left: 6.5%;
     padding-right: 6.5%;
@@ -338,17 +348,24 @@ picture, source, img {
     left: 6%;
     bottom: -12px;
   }
+
+  .container_1, .container_2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .images_1, .images_2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
   .images_1 {
     width: 204px;
     height: 300px;
     top: 80px;
-    left: calc(50% - 102px);
   }
   .images_2 {
     width: 302px;
     height: 250px;
     top: 78px;
-    left: calc(50% - 151px);
   }
   .images_3, .images_4, .images_5 {
     width: 100%;
@@ -358,11 +375,11 @@ picture, source, img {
   
   
   .footer {
-    height: 568px;
+    min-height: 568px;
     background-image: url("sources/img/game_767.jpg");
   }
   .footer_container {
-    height: 568px;
+    min-height: 568px;
     padding-top: 99px;
     padding-bottom: 10px;
   }
@@ -413,12 +430,12 @@ picture, source, img {
     height: 43px;
     margin-right: 27px;
   }
-  .buttons_text > p {
+  .buttons_text > span {
     font-size: 14px;
   }
-  span {
+  /*span {
     font-weight: 300;
-  }
+  }*/
 
   .named, .title_1 {
     font-size: 4.1vw;
@@ -452,7 +469,7 @@ picture, source, img {
   }
   .container > p {
     font-size: 24px;
-    font-weight: 400;
+    /*font-weight: 400;*/
     margin-bottom: 0;
   }
 
@@ -461,11 +478,11 @@ picture, source, img {
 
 @media(min-width: 768px) and (max-width: 1199px) {
   .top {
-    height: 960px;
+    min-height: 960px;
     background-image: url("sources/img/football_1280.jpg");
   }
   .header_container {
-    height: 960px;
+    min-height: 960px;
     padding-top: 40px;
     padding-bottom: 91px;
   }
@@ -473,7 +490,7 @@ picture, source, img {
   .logotype {
     width: 205px;
     height: 56px;
-    margin-bottom: 160зч;
+    margin-bottom: 160px;
   }
 
   .title {
@@ -504,6 +521,7 @@ picture, source, img {
   }
   .content > p {
     font-size: 16px;
+    margin-top: 15px;
   }
   .post_number {
     width: 117px;
@@ -571,11 +589,11 @@ picture, source, img {
   
 
   .footer {
-    height: 959px;
+    min-height: 959px;
     background-image: url("sources/img/game_1280.jpg");
   }
   .footer_container {
-    height: 959px;
+    min-height: 959px;
     padding-top: 126px;
     padding-bottom: 23px;
   }
@@ -616,7 +634,7 @@ picture, source, img {
 
 @media(min-width: 1200px) {
   .top {
-    height: 50%;
+    min-height: 50%;
     background-image: url("sources/img/football_1920.jpg");
   }
   .header_container {
@@ -751,7 +769,7 @@ picture, source, img {
   }
 
   .footer {
-    height: 50%;
+    min-height: 50%;
     background-image: url("sources/img/game_1920.jpg");
   }
 
