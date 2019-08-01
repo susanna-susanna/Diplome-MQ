@@ -5,20 +5,30 @@ body {
 
 @font-face {
   font-family: 'Open Sans';
-  src: url("sources/fonts/OpenSans-Bold.ttf") format("opentype"),
-       url("sources/fonts/OpenSans-Bold.woff") format("woff"),
-       url("sources/fonts/OpenSans-Bold.woff2") format("woff2"),
-       url("sources/fonts/OpenSans-Regular.ttf") format("opentype"),
+  src: url("sources/fonts/OpenSans-Regular.ttf") format("opentype"),
        url("sources/fonts/OpenSans-Regular.woff") format("woff"),
        url("sources/fonts/OpenSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
-/*.top, .named, .sect_title, .number, .download_app, .buttons_text_bold {
-  font-weight: inherit;
-}*/
-/*.top, */.title, .named, .sect_title, .number, .download_app, .buttons_text_bold {
+ @font-face {
+  font-family: 'Open Sans';
+  src: url("sources/fonts/OpenSans-Bold.ttf") format("opentype"),
+       url("sources/fonts/OpenSans-Bold.woff") format("woff"),
+       url("sources/fonts/OpenSans-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;  
+}
+
+.title, .named, .sect_title, .number, .download_app, .buttons_text_bold {
   font-weight: bold;
 }
+
+.buttons_text_norm, main .post .container p, aside .post .container p {
+  font-weight: normal;
+}
+
 .top, .buttons_text, .named, .sect_title, .footer {
   text-transform: uppercase;
 }
@@ -74,7 +84,6 @@ body {
   width: 100%;
   height: 100%;
   text-decoration: none;
-  /*display: block;*/
   color: #FFFFFF;
 }
 
@@ -108,18 +117,11 @@ body {
 
 .buttons_text {
   text-align: left;
-  /*font-weight: lighter;*/
 }
 .buttons_text > span {
   display: block;
   margin-top: 1px;
   margin-bottom: 1px;
-}
-
-.buttons_text_norm {
-  font-weight: lighter;
-  /*font-weight: 400;*/
-  font-weight: normal;
 }
 
 .btn:hover, .btn:hover .icon {
@@ -129,7 +131,6 @@ body {
 .down_app:hover, .get_it_on:hover, .btn:hover {
   background-color: #FFFFFF;
 }
-
 
 .collobaration {
   background-color: #F5F4F9;
@@ -146,7 +147,6 @@ body {
 .named{
   color: #E7E7E7;
 }
-
 
 .sect_title {
   color: #C1C1C1;
@@ -210,7 +210,6 @@ picture, source, img {
   background-size: cover;
   background-position: center center;
   font-family: inherit;
-  font-weight: inherit;
   color: #ffffff;
   position: relative;
   z-index: 2;
@@ -240,10 +239,7 @@ picture, source, img {
   color: #A496CA;
 }
 
-main .post .container p, aside .post .container p {
-  font-weight: lighter;
-  font-weight: normal;
-}
+
 
 
 @media(max-width: 767px) {
@@ -317,7 +313,6 @@ main .post .container p, aside .post .container p {
     font-size: 15px;
     line-height: 26px;
   }
-  
   .sect_title {
     font-size: 23px;
     margin-top: 0;
@@ -348,7 +343,6 @@ main .post .container p, aside .post .container p {
     left: 6%;
     bottom: -12px;
   }
-
   .container_1, .container_2 {
     display: flex;
     flex-direction: column;
@@ -372,7 +366,6 @@ main .post .container p, aside .post .container p {
     height: 109vw;
     background-color: #E66D5A;
   }
-  
   
   .footer {
     min-height: 568px;
@@ -433,22 +426,14 @@ main .post .container p, aside .post .container p {
   .buttons_text > span {
     font-size: 14px;
   }
-  /*span {
-    font-weight: 300;
-  }*/
-
+  
   .named, .title_1 {
     font-size: 4.1vw;
     line-height: 4vw; 
   }
-
   .images_1, .images_2  {
     position: absolute;
     z-index: 3;
-  }
-
-  .can_do {
-    line-height: 35px;
   }
   .buttons_text > span, .number, .opac {
     letter-spacing: 1px;
@@ -462,17 +447,17 @@ main .post .container p, aside .post .container p {
   .opac {
     font-size: 24px;
   }
-  
   .content > p, .container > p {
     line-height: 28px;
     letter-spacing: 1px;
   }
   .container > p {
     font-size: 24px;
-    /*font-weight: 400;*/
     margin-bottom: 0;
   }
-
+  .can_do {
+    line-height: 35px;
+  }
 }
 
 
@@ -486,13 +471,11 @@ main .post .container p, aside .post .container p {
     padding-top: 40px;
     padding-bottom: 91px;
   }
-  
   .logotype {
     width: 205px;
     height: 56px;
     margin-bottom: 160px;
   }
-
   .title {
     letter-spacing: 3px;
     margin-left: 9.5%;
@@ -513,7 +496,6 @@ main .post .container p, aside .post .container p {
     width: 85%;
   }
 
-  
   .sect_title {
     font-size: 32px;
     letter-spacing: 2px;
@@ -529,17 +511,14 @@ main .post .container p, aside .post .container p {
     bottom: -36px;
     left: 4.5%;
   }
-
   .container_1 > .named, .container_1 > .content {
     padding-left: 39%;
     padding-right: 4%;
   }
-  
   .container_2 > .named, .container_2 > .content {
     padding-left: 4%;
     padding-right: 50%;
   }
-  
   .content {
     padding-top: 58px;
     padding-bottom: 33px;
@@ -609,7 +588,6 @@ main .post .container p, aside .post .container p {
     width: 107px;
     height: 85px;
   } 
-
   .to_logo {
     margin-bottom: 270px;
   }
@@ -618,16 +596,13 @@ main .post .container p, aside .post .container p {
     letter-spacing: 3px;
     margin: 0;
   }
-  
   .can_do {
     font-size: 36px;
     margin: 0;
   }
-  
   .footer_container > .store_buttons {
     margin-bottom: 55px; 
   }
-
 }
 
 
@@ -678,12 +653,10 @@ main .post .container p, aside .post .container p {
     line-height: 28px;
     margin-top: 15px;
   }
-     
   .container_1 > .named, .container_1 > .content {
     padding-left: 50%;
     padding-right: 10%;
   }
-  
   .container_2 > .named, .container_2 > .content {
     padding-left: 10%;
     padding-right: 51%;
@@ -703,7 +676,6 @@ main .post .container p, aside .post .container p {
   .post_1 {
     display: flex;
   }
-
   .images_1 {
     width: 28vw;
     height: 44vw;
@@ -716,6 +688,7 @@ main .post .container p, aside .post .container p {
     top: -83px;
     right: 3%
   }
+  
   .images_3, .images_4, .images_5 {
     width: 50%;
     height: 38vw;
@@ -725,7 +698,6 @@ main .post .container p, aside .post .container p {
     width: 100%;
     height: 100%;
   }
-  
   aside .container {
     width: 50%;
     display: flex;
@@ -734,11 +706,9 @@ main .post .container p, aside .post .container p {
     padding-bottom: 75px;
     align-self: center;
   }
-  
   .post_1:nth-child(even) {
     flex-direction: row-reverse;
   }
-  
   .post_1:nth-child(odd) p, .post_1:nth-child(odd) .title_1 {
     padding-left: 6.5vw;
     padding-right: 10vw;
@@ -747,19 +717,16 @@ main .post .container p, aside .post .container p {
     padding-left: 10vw;
     padding-right: 6.5vw;
   }
-
   .title_1 {
     font-size: 4.1vw;
     line-height: 4vw; 
     margin-top: 0;
     margin-bottom: 2.6vw;
   }
-
   .post_number {
     width: 8.8vw;
     height: 8vw;
     top: 11vw;
-    /*left: calc(width/2);*/
   }
   .post_1:nth-child(odd) .post_number {
     right: -4.4vw;
@@ -772,12 +739,10 @@ main .post .container p, aside .post .container p {
     min-height: 50%;
     background-image: url("sources/img/game_1920.jpg");
   }
-
   .footer_container {
     padding-top: 12vw;
     padding-bottom: 52px;
   }
-
   .app_container {
     display: flex;
     width: 46vw;
@@ -807,7 +772,6 @@ main .post .container p, aside .post .container p {
     text-align: left;
     margin: 0;
   }
-
   .footer_container > .store_buttons {
     margin-bottom: 13vw; 
   }
